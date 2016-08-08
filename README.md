@@ -126,7 +126,7 @@ Since some fields are very specific to your application for e.g. *user_name*, so
         fields[:site] = request.path =~ /^\/api/ ? 'api' : 'user'
 
         # If you are using custom instrumentation, just add it to logstasher custom fields
-        LogStasher.custom_fields << :myapi_runtime
+        LogStasher::CustomFields.custom_fields << :myapi_runtime
       end
     end
 
